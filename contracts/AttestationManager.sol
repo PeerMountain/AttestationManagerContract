@@ -45,10 +45,10 @@ contract AttestationManager is Ownable, BasicToken {
             cr.setClaim(msg.sender, keccak256(abi.encodePacked(value)), value); 
         }
         function sendTokens(address AEaddress, bytes32 key){
-            attestationEngine[AEid] = AEaddress;
-            var AEid = attestationEngine[AEaddress]
-            uint256 tokens = tokenDebit[AEid][key];
-            bool sent = transfer(AEid, tokens);
-            if(sent == true) delete tokenDebit[AEid][key] = tokens;
+            // attestationEngine[AEid] = AEaddress;
+            // var AEid = attestationEngine[AEaddress];
+            // uint256 tokens = tokenDebit[AEid][key];
+            // bool sent = transfer(AEid, tokens);
+            // if(sent == true) delete tokenDebit[AEid][key] = tokens;
         }
     }

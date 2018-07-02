@@ -2,7 +2,7 @@ pragma solidity ^0.4.23;
 
 
 import "./ERC20Basic.sol";
-import "./math/SafeMath.sol";
+import "./SafeMath.sol";
 
 
 /**
@@ -16,6 +16,10 @@ contract BasicToken is ERC20Basic {
 
   uint256 totalSupply_;
 
+ constructor (address _owner, uint256 _totalSupply) public { 
+    totalSupply_ = _totalSupply;
+    balances[_owner] = totalSupply_;
+  }
   /**
   * @dev total number of tokens in existence
   */
